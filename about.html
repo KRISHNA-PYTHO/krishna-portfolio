@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my portfolio</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <script src="https://kit.fontawesome.com/b258d1a519.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                <img src="user.png.jpg" >
+            </div>
+                <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>I Love Challenges!</p>
+                <p>I am career minded individual with ambitious,positive and professional attitude and super quick learner.</p>
+                <p>I have more than 4 years experience with marketing which is proven by achieving business goals and providing to guests and customers exellent service.</p>
+                <div class="tab-title">
+                    <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('Education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="Skills">
+                    <ul>
+                        <li><span>Web Development</span><br>Web Development</li>
+                        <li><span>Sale Excutive</span><br>Customer Service Skills</li>
+                        <li><span>Sale Representive</span><br>Communication,Negtiation,Active Listening,Relationship Building,Prospecting,Time Management</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="Experience">
+                    <ul>
+                        <li><span>2024-Current</span><br>Loreal India Pvt Ltd [Swastik Agencies] At Sale Representive</li>
+                        <li><span>2021-2024</span><br>Avenue Ecommerce Pvt Ltd[Dmart Ready] At Sale Exceutive</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="Education">
+                    <ul>
+                        <li><span>2024-2025</span><br>Pursing Master In FUll Stack Development With Python</li>
+                        <li><span>2021-2020</span><br>HSC From Maharshtra Board</li>
+                        <li><span>2017-2018</span><br>SSC From Maharshtra Board</li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+            </div>
+        </div>
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab")
+            }
+    
+            var sidemenu = document.getElementById("sidemenu");
+    
+            function openmenu(){
+                sidemenu.style.right =  "0";
+            }
+    
+            function closemenu(){
+                sidemenu.style.right = "-200px"
+            }
+    
+        </script>
+</body>
+</html>
